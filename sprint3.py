@@ -1,6 +1,3 @@
-import funcoes3
- 
-
 # Solicitando nome, email
 nome = input("Digite seu nome: ")
 email = input("Digite seu email: ")
@@ -79,10 +76,53 @@ while True:
 
  
 
+# CRIANDO FUNÇÕES DA ESCOLHA NÚMERO 2
+# Criando a primeira função (primeira opção do menu)
+    def linha1(onibus_linha1):
+        if onibus_linha1 == 309:
+            return dicionario_linha1['309']
+        elif onibus_linha1 == 105:
+            return dicionario_linha1['105']
+        elif onibus_linha1 == 56:
+            return dicionario_linha1['56']
+        else:
+            return "Ônibus não encontrado, por favor tente novamente" 
+        
+    def linha2(onibus_linha2):
+        if onibus_linha2 == 57:
+            return dicionario_linha2['57']
+        elif onibus_linha2 == 7662:
+            return dicionario_linha2['7662']
+        elif onibus_linha2 == 1200:
+            return dicionario_linha2['1200']
+        else:
+            return "Ônibus não encontrado, por favor tente novamente" 
+        
+    def linha3(onibus_linha3):
+        if onibus_linha3 == 898:
+            return dicionario_linha3['898']
+        elif onibus_linha3 == 62:
+            return dicionario_linha3['62']
+        elif onibus_linha3 == 1432:
+            return dicionario_linha3['1432']
+        else:
+            return "Ônibus não encontrado, por favor tente novamente" 
+            
+    def linha4(onibus_linha4):
+        if onibus_linha4 == 44:
+            return dicionario_linha4['44']
+        elif onibus_linha4 == 128:
+            return dicionario_linha4['128']
+        elif onibus_linha4 == 2870:
+            return dicionario_linha4['2870']
+        else:
+            return "Ônibus não encontrado, por favor tente novamente" 
+
+
 # Criando situação 2
     if escolha == 2:
 # Printando menu de opções de linhas dos ônibus
-        print('''[1] - Linha 1 (Metrô Tucuruvi - Terminal Bandeira) \n[2] - Linha 2 (Terminal Pirituba - Terminal Princesa Isabel) \n[3] - Linha 3 (Terminal Campo Limpo - Metrô São Judas) \n[4] - Linha 4 (Metrô Tucuruvi - Pinheiros)''')
+        print('''[1] - Linha 1 (Metrô Tucuruvi - Terminal Bandeira) \n[2] - Linha 2 (Terminal Pirituba - Terminal Princesa Isabel)  \n[3] - Linha 3 (Terminal Campo Limpo - Metrô São Judas) \n[4] - Linha 4 (Metrô Tucuruvi - Pinheiros)''')
         escolha2 = int(input("Escolha uma das linhas: "))
         
 
@@ -95,50 +135,90 @@ while True:
         # Linha 1
         if escolha2 == 1:
          
-           print("Os ônibus disponiveis na linha 1 no momento são: \n309 \n105 \n056")
+           print("Os ônibus disponiveis na linha 1 no momento são: \n309 \n105 \n56")
            dicionario_linha1 = {
-               '309': 'Rampa de Acesso',
-               '105': 'Elevador',
-                '056': 'Nenhum tipo de acessibilidade'
+                '309': '\nEsse ônibus oferece rampa de acesso aos deficientes\n',
+                '105': '\nEsse ônibus oferece elevador de acesso para deficientes\n',
+                '56': '\nEsse ônibus não oferece nenhum tipo de acessibilidade\n'
            }
+        
+        # Chamando a função da linha 1
            onibus_linha1 = int(input("Escolha um desses ônibus e confira os níveis de acessibilidade dele: "))
-
-           funcoes3.linha1(onibus_linha1)
+           a = linha1(onibus_linha1)
+           print(a)
 
         # Linha 2
         if escolha2 ==2:
             
-            print("Os ônibus disponiveis na linha 2 no momento são: \n057 \n7662 \n1200-T")
+            print("Os ônibus disponiveis na linha 2 no momento são: \n57 \n7662 \n1200")
             dicionario_linha2 = {
-               '057': 'Rampa de Acesso',
-               '7662': 'Elevador',
-                '1200-T': 'Nenhum tipo de acessibilidade'
+                '57': '\nEsse ônibus oferece rampa de acesso aos deficientes\n',
+                '7662': '\nEsse ônibus oferece elevador de acesso aos deficientes\n',
+                '1200': '\nEsse ônibus não oferece nenhum tipo de acessibilidade aos deficientes\n'
            }
-            
-            onibus_linha2 = int(input("Escolha um desses ônibus e confira os níveis de acessibilidade dele"))
+        
+        # Chamando a função da linha 2
+            onibus_linha2 = int(input("Escolha um desses ônibus e confira os níveis de acessibilidade dele: "))
+            b = linha2(onibus_linha2)
+            print(b)
 
         # Linha 3    
         if escolha2 == 3:
 
             print("Os ônibus disponiveis na linha 3 no momento são: \n898 \n62 \n1432")
             dicionario_linha3 = {
-               '898': 'Rampa de Acesso',
-               '62': 'Elevador',
-                '1432': 'Nenhum tipo de acessibilidade'
+                '898': '\nEsse ônibus oferece rampa de acesso aos deficientes\n',
+                '62': '\nEsse ônibus oferece elevador aos deficientes\n',
+                '1432': '\nEsse ônibus oferece não nenhum tipo de acessibilidade aos deficientes\n'
            }
-            onibus_linha3 = int(input("Escolha um desses ônibus e confira os níveis de acessibilidade dele"))
+            
+        # Chamando a função da linha 3
+            onibus_linha3 = int(input("Escolha um desses ônibus e confira os níveis de acessibilidade dele: "))
+            c = linha3(onibus_linha3)
+            print(c)
 
         # Linha 4
         if escolha2 == 4:
             print("Os ônibus disponiveis na linha 4 no momento são: \n128 \n44 \n2870")
             dicionario_linha4 = {
-               '2870': 'Rampa de Acesso',
-               '44': 'Elevador',
-                '128': 'Nenhum tipo de acessibilidade'
+                '2870': '\nEsse ônibus oferece rampa de acesso aos deficientes\n',
+                '44': '\nEsse ônibus oferece elevador de acesso aos deficientes\n',
+                '128': '\nEsse ônibus oferece nenhum tipo de acessibilidade aos deficientes\n'
            }
-            onibus_linha4 = int(input("Escolha um desses ônibus e confira os níveis de acessibilidade dele"))
+            
+        # Chamando a função da linha 4
+            onibus_linha4 = int(input("Escolha um desses ônibus e confira os níveis de acessibilidade dele: "))
+            d = linha4(onibus_linha4)
+            print(d)
 
  
+
+    # CRIANDO FUNÇÕES DA ESCOLHA NÚMERO 3
+    # Fazendo a primeira pergunta do quiz com uso de função
+    def quiz1():
+        questao1 = input("Quantos '%' da população brasileira possui algum tipo de deficiência? \na)35% \nb)20% \nc)24% \nd)25% \nResposta: ")
+        return questao1
+
+
+    # Criando a segunda pergunta com uso de função
+    def quiz2():
+        questao2 = input("Quantos '%' das pessoas com deficiência no Brasil passam por dificuldades ao pegar um transporte público? \na) 50% \nb) 55% \nc) 65% \nd) 63% \nResposta: ")
+        return questao2
+
+
+    # Fazendo a terceira pergunta com uso de função
+    def quiz3():
+        questao3 = input(
+            "Quantos '%' dos ônibus urbanos você acha que atendem plenamente as necessidades dos deficientes? \na) 1% \nb) 0.9% \nc) 1.5% \nd) 1.3% \nResposta: ")
+        return questao3
+
+
+    # Fazendo a quarta pergunta com uso de função
+    def quiz4():
+        questao4 = input(
+            "Quantos '%' dos deficientes dizem que os ônibus tem uma acessibilidade boa ou muito boa? \na) 20% \nb) 25% \nc) 22% \nd) 18% \nResposta: ")
+        return questao4
+
 
 # Criando a situação 3
     if escolha == 3:
@@ -147,7 +227,7 @@ while True:
         cont = 0
 
     # Chamando a função da primeira pergunta do quiz
-        populacao = funcoes3.quiz1()
+        populacao = quiz1()
  
 
     # Conferindo se a resposta está correta e contando
@@ -156,7 +236,7 @@ while True:
 
 
     # Chamando a função da segunda pergunta do quiz
-        dificuldade = funcoes3.quiz2()
+        dificuldade = quiz2()
  
 
     # Conferindo se a resposta está correta e contando
@@ -165,7 +245,7 @@ while True:
 
     
     # Chamando a função da terceira pergunta do quiz
-        onibus = funcoes3.quiz3()
+        onibus = quiz3()
 
 
     # Conferindo se a resposta está correta e contando
@@ -174,7 +254,7 @@ while True:
 
        
     # Chamando a função da quarta pergunta do quiz
-        acessibilidade = funcoes3.quiz4()
+        acessibilidade = quiz4()
 
 
     # Conferindo se a resposta está correta e contando
@@ -183,7 +263,7 @@ while True:
 
 
     # Transformando as questões em variáveis
-        a2 = ("Quantos '%' da população brasileira possui algum tipo de deficiência? \na)35% \nb)20% \c)24% \nd)25%")
+        a2 = ("Quantos '%' da população brasileira possui algum tipo de deficiência? \na)35% \nb)20% \nc)24% \nd)25%")
         b2 = ("Quantos '%' das pessoas com deficiência no Brasil passam por dificuldades ao pegar um transporte público? \na) 50% \nb) 55% \nc) 65% \nd) 63%")
         c2 = ("Quantos '%' dos ônibus urbanos você acha que atendem plenamente as necessidades dos deficientes? \na) 1% \nb)0.9% \nc) 1.5% \nd)1.3%")
         d2 = ("Quantos '%' dos deficientes dizem que os ônibus tem uma acessibilidade boa ou muito boa? \na) 20% \nb) 25% \nc) 22% \nd) 18%")
